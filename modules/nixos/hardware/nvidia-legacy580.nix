@@ -40,6 +40,7 @@
           __GLX_VENDOR_LIBRARY_NAME = "nvidia";
           __GL_GSYNC_ALLOWED = "1";
           __GL_VRR_ALLOWED = "1";
+          GSK_RENDERER = "ngl";
         };
       };
     };

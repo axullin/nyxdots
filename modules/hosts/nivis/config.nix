@@ -66,6 +66,10 @@
                 ".local/share/PrismLauncher"
                 ".local/share/anime-game-launcher"
 
+                # Arduino IDE
+                ".arduino15"
+                ".config/arduino-ide"
+
                 # Editors / AI tooling
                 ".cursor"
                 ".config/cursor"
