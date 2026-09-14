@@ -1,15 +1,14 @@
 { config, ... }:
 {
-  flake.modules.homeManager.nivis =
-    { userName, ... }:
-    {
-      imports = with config.flake.modules.homeManager; [
-        desktop
-      ];
+  flake.modules.homeManager.nivis = {
+    imports = with config.flake.modules.homeManager; [
+      desktop
+      packages
+    ];
 
-      nyx.desktop.hyprland.enable = true;
-      nyx.desktop.noctalia.enable = true;
+    nyx.desktop.hyprland.enable = true;
+    nyx.desktop.noctalia.enable = true;
 
-      home.stateVersion = "26.05";
-    };
+    home.stateVersion = "26.05";
+  };
 }

@@ -1,8 +1,6 @@
 {
   flake.modules.nixos.virtualisation =
     {
-      config,
-      lib,
       pkgs,
       userName,
       ...

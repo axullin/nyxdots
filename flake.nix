@@ -15,10 +15,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nixcord = {
-      url = "github:kaylorben/nixcord";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
     disko = {
       url = "github:nix-community/disko/latest";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -31,12 +27,8 @@
       url = "github:hyprwm/Hyprland";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-    nvf = {
-      url = "github:NotAShelf/nvf";
-      inputs.nixpkgs.follows = "nixpkgs";
-    };
-    helium = {
-      url = "github:schembriaiden/helium-browser-nix-flake";
+    nixcord = {
+      url = "github:kaylorben/nixcord";
       inputs.nixpkgs.follows = "nixpkgs";
     };
     zen-browser = {
@@ -49,11 +41,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.flake-parts.follows = "flake-parts";
     };
+    aagl = {
+      url = "github:ezKEa/aagl-gtk-on-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     assets = {
       url = "github:axullin/assets";
       flake = false;
     };
-    den.url = "github:denful/den";
     import-tree.url = "github:vic/import-tree";
     sops-nix.url = "github:Mic92/sops-nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
@@ -63,6 +58,5 @@
     noctalia.url = "github:noctalia-dev/noctalia/";
     nixvim.url = "github:nix-community/nixvim";
     nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-    fetch.url = "github:areofyl/fetch";
   };
 }

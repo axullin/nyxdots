@@ -2,20 +2,15 @@
 {
   imports = [ inputs.treefmt-nix.flakeModule ];
 
-  perSystem =
-    {
-      config,
-      pkgs,
-      system,
-      ...
-    }:
-    {
-      treefmt.config = {
-        projectRootFile = "flake.nix";
-        flakeCheck = true;
-        programs = {
-          nixfmt.enable = true;
-        };
+  perSystem = {
+    treefmt.config = {
+      projectRootFile = "flake.nix";
+      flakeCheck = true;
+      programs = {
+        nixfmt.enable = true;
+        deadnix.enable = true;
+        statix.enable = true;
       };
     };
+  };
 }

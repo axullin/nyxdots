@@ -3,9 +3,7 @@
     {
       pkgs,
       lib,
-      config,
       userName,
-      userEmail,
       ...
     }:
     {
@@ -32,7 +30,7 @@
         mutableUsers = false;
         defaultUserShell = pkgs.fish;
         users.${userName} = {
-          hashedPasswordFile = "/persist/passwords/axullin";
+          hashedPasswordFile = "/persist/passwords/${userName}";
           isNormalUser = true;
           extraGroups = [
             "networkmanager"

@@ -22,8 +22,6 @@
         # TODO: change the datadir and server enablement into per host options
         systemd.services.minecraft-server-nivel.unitConfig.RequiresMountsFor = "/mnt/storage";
 
-        nixpkgs.overlays = [ inputs.nix-minecraft.overlay ];
-
         networking.firewall.allowedUDPPorts = [ 24454 ];
 
         services.minecraft-servers = {

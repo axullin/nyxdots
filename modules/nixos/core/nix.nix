@@ -5,12 +5,8 @@
       nix = {
         channel.enable = false;
 
-        gc = {
-          automatic = false;
-          options = "--delete-older-than 7d";
-          dates = "weekly";
-          persistent = true;
-        };
+        # programs.nh.clean owns generation cleanup, and asserts this stays off.
+        gc.automatic = false;
 
         optimise.automatic = true;
 
@@ -30,7 +26,6 @@
           keep-outputs = true;
           keep-derivations = true;
           keep-going = false;
-          auto-optimise-store = true;
           warn-dirty = false;
           connect-timeout = 5;
           builders-use-substitutes = true;

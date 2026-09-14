@@ -3,7 +3,9 @@
   flake.overlays = {
     additions = final: _prev: import ../../pkgs { pkgs = final; };
 
-    modifications = final: prev: {
+    minecraft = inputs.nix-minecraft.overlay;
+
+    modifications = _final: prev: {
       hyprland-git = inputs.hyprland.packages.${prev.stdenv.hostPlatform.system};
     };
 
