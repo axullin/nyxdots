@@ -10,6 +10,7 @@
         hardware
         networking
         virtualisation
+        printing3d
       ];
 
       nyx = {
@@ -18,6 +19,8 @@
         };
 
         hardware.nvidia.enable = true;
+
+        printing3d.enable = true;
 
         gaming.aagl = {
           enable = true;
@@ -41,7 +44,7 @@
                 # Credentials
                 ".local/share/keyrings"
 
-                # This flake's location 
+                # This flake's location
                 ".config/nixos"
 
                 # Browsers
@@ -81,6 +84,14 @@
                 ".config/obs-studio"
                 ".cache/spotify-player"
 
+                # 3D modeling / printing
+                ".config/blender"
+                ".config/FreeCAD"
+                ".local/share/FreeCAD"
+                ".config/OrcaSlicer"
+                ".config/BambuStudio"
+                ".local/share/bambuddy"
+
                 # Peripherals
                 ".config/OpenTabletDriver"
                 ".config/wootility"
@@ -99,7 +110,7 @@
               ];
 
               files = [
-               # Add files if necesarry
+                # Add files if necesarry
               ];
             };
           };
