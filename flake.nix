@@ -36,6 +36,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
       inputs.home-manager.follows = "home-manager";
     };
+    firefox-addons = {
+      url = "gitlab:rycee/nur-expressions?dir=pkgs/firefox-addons";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     playit = {
       url = "github:pedorich-n/playit-nixos-module";
       inputs.nixpkgs.follows = "nixpkgs";

@@ -1,0 +1,13 @@
+name = "Sniffers Sniffs Delights! (SSD) (A Farmer's Delight Add-on)"
+filename = "sniffers_sniff_delights-fabric-1.21.1-1.21.11-1.4.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/GCqY8HnI/versions/dU1maOJZ/sniffers_sniff_delights-fabric-1.21.1-1.21.11-1.4.jar"
+hash-format = "sha512"
+hash = "9d466af5e55037839998ef8b12edfeaf32c48c3cf5e2c27d8230f5ec0a9a286103bc8aa2f3c94c2790092661b6084004dac7c6b24151a007491f376738380643"
+
+[update]
+[update.modrinth]
+mod-id = "GCqY8HnI"
+version = "dU1maOJZ"

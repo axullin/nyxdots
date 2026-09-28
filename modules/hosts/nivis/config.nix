@@ -47,9 +47,13 @@
                 # This flake's location
                 ".config/nixos"
 
+                # Nix
+                ".cache/nix"
+
                 # Browsers
                 ".config/BraveSoftware"
                 ".config/zen"
+                ".mozilla/firefox"
 
                 # Discord
                 ".config/discord"
@@ -63,6 +67,7 @@
                 # Gaming
                 ".steam"
                 ".local/share/Steam"
+                ".config/unity3d"
                 ".local/share/osu"
                 ".local/share/Celeste"
                 ".config/Olympus"

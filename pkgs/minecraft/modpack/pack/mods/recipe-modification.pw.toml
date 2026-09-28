@@ -1,0 +1,13 @@
+name = "Recipe Modification library"
+filename = "recipe_modification-fabric-1.21.1-0.1.2.jar"
+side = "server"
+
+[download]
+url = "https://cdn.modrinth.com/data/fRIu3HNp/versions/MY1nV5Yh/recipe_modification-fabric-1.21.1-0.1.2.jar"
+hash-format = "sha512"
+hash = "e59635bf278d1ac3466574342413b2dd630e76fa2781eb9bbcb29befa4822bc22f026a40c6288fd70ef7ec24b16bf10e83982618e4b39e4ce92f1ca2d96cfe6b"
+
+[update]
+[update.modrinth]
+mod-id = "fRIu3HNp"
+version = "MY1nV5Yh"

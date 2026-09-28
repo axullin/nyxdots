@@ -8,6 +8,7 @@
         ffmpeg
         krita
         obsidian
+        droidcam
       ];
     };
 }

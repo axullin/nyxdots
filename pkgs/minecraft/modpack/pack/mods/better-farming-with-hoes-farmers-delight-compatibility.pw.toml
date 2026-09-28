@@ -1,0 +1,13 @@
+name = "Better Farming with Hoes - Farmers Delight Compatibility"
+filename = "better-farming-with-hoes-farmers-delight-compatibility-1.0.0a.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/ajDsDDly/versions/kDjvU8XF/better-farming-with-hoes-farmers-delight-compatibility-1.0.0a.jar"
+hash-format = "sha512"
+hash = "5705e60a95b1ed5cdca4be918cce5ccf315d370c5c699e1dc9269afc0f50ef3492337b53e7bdf9996d48bb8514d9b7c86efd60fdd46c8809f077f395fb91e98c"
+
+[update]
+[update.modrinth]
+mod-id = "ajDsDDly"
+version = "kDjvU8XF"

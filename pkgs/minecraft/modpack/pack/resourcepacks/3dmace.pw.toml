@@ -1,0 +1,13 @@
+name = "Ray's 3D Mace"
+filename = "Rays 3D Mace.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/gR0azcXL/versions/dRh8W7Fs/Rays%203D%20Mace.zip"
+hash-format = "sha512"
+hash = "dfacf54e64893b9543c0ad8af1a9d76174a09463e4d256bbc0d639fd7daa6f304af8624a369be2181d14964bea4003af9f6a549d475bf14b3f2b1c1c5a2c4330"
+
+[update]
+[update.modrinth]
+mod-id = "gR0azcXL"
+version = "dRh8W7Fs"

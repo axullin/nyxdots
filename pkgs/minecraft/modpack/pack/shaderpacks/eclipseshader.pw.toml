@@ -1,0 +1,13 @@
+name = "EclipseShader"
+filename = "RealisticShader_4.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/JnWLB0ij/versions/qjdD4hcK/RealisticShader_4.zip"
+hash-format = "sha512"
+hash = "7f11b376b734db7ced1a5e99e7e6b55c90b253780f8611b0ac857ddd5176baab5f45f31d628e78f1e90625921c9719e823cc52f68844ffd32113c2af80c28da9"
+
+[update]
+[update.modrinth]
+mod-id = "JnWLB0ij"
+version = "qjdD4hcK"

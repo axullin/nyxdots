@@ -1,0 +1,13 @@
+name = "Better Farming with Hoes"
+filename = "better-farming-with-hoes-1.0.1b.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/5ZQ7giVS/versions/piVxfd64/better-farming-with-hoes-1.0.1b.jar"
+hash-format = "sha512"
+hash = "777915288cf4a6f66c71959c76d5c64e34fcbd2e61009f995f1f729efd1c806b1d92ed3423e8846eccc27eaa6fc9c7ecff5172c379c129a05a2df3012907079a"
+
+[update]
+[update.modrinth]
+mod-id = "5ZQ7giVS"
+version = "piVxfd64"

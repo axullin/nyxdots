@@ -9,6 +9,7 @@
         playerctl
         reaper
         wireplumber
+        vlc
       ];
     };
 }

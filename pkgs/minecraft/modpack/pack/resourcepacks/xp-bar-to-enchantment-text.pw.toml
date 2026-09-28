@@ -1,0 +1,13 @@
+name = "Enchanted"
+filename = "Enchanted.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/QvkCB0QE/versions/TCaZMjsR/Enchanted.zip"
+hash-format = "sha512"
+hash = "04ac87a094a357ea74ed7e06c66664d3ac6b6377bef388ef0a4b826010301e0a8fb885ab7f622af8209cdf6d591a92537c4234c1f6e82875f87b01c0fd0d4a32"
+
+[update]
+[update.modrinth]
+mod-id = "QvkCB0QE"
+version = "TCaZMjsR"

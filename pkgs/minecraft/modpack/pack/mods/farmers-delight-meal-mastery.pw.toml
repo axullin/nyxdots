@@ -1,0 +1,13 @@
+name = "Farmer's Delight: Meal Mastery"
+filename = "mealmastery-fabric-1.21.1-1.1.2.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/up8htK5I/versions/IqCbzaIa/mealmastery-fabric-1.21.1-1.1.2.jar"
+hash-format = "sha512"
+hash = "23230de155576526046ddb37d594361bb43cabb644dc532529d5a2de29f72b98a6d38deabc92e949d3d1e6b08d65d42d6cf4febd4cf48b351c5a3ca2bf8b8051"
+
+[update]
+[update.modrinth]
+mod-id = "up8htK5I"
+version = "IqCbzaIa"
