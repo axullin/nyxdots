@@ -115,18 +115,18 @@
       },
       "locked": {
         "dir": "pkgs/firefox-addons",
-        "lastModified": 1791432170,
-        "narHash": "sha256-5wbx6Y+RFfmRl5ZU8HC5I4WcfAZeuQhXOPunWZNZ3t8=",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "rev": "49d533b9ed362f0de2de372f28731b9d86d56cd3",
-        "type": "gitlab"
+        "lastModified": 1791691571,
+        "narHash": "sha256-btJ4vVIAyQp3BqlARGdbJb9iq3WD7/KTSj0QW5DmvLM=",
+        "ref": "refs/heads/master",
+        "rev": "17a8cf0be701c3f264e42c8465368a0cc602bb18",
+        "revCount": 4986,
+        "type": "git",
+        "url": "https://gitlab.com/rycee/nur-expressions.git"
       },
       "original": {
         "dir": "pkgs/firefox-addons",
-        "owner": "rycee",
-        "repo": "nur-expressions",
-        "type": "gitlab"
+        "type": "git",
+        "url": "https://gitlab.com/rycee/nur-expressions.git"
       }
     },
     "flake-compat": {
@@ -901,11 +901,11 @@
     },
     "nixpkgs-stable": {
       "locked": {
-        "lastModified": 1791699173,
-        "narHash": "sha256-T1BkIUDKKWrk6fb6Pb9eZ/TAdtnMuFPYkSc0Dg8OMSM=",
+        "lastModified": 1791728174,
+        "narHash": "sha256-V1txnsKVLKcMF2FTcrEOb8GHtNVVvuZoZD+w97WQLYU=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "af072d56841be6b40cb11464ce24da6be5215f91",
+        "rev": "bee9f34907cfef920908c9ae81d7167a14ce3856",
         "type": "github"
       },
       "original": {
@@ -1049,11 +1049,11 @@
         "nixpkgs": "nixpkgs_6"
       },
       "locked": {
-        "lastModified": 1791701131,
-        "narHash": "sha256-mBCtcZPGgBLfEYxFvBRsc0KeDz0JtN2BMhcIWGoMk94=",
+        "lastModified": 1791726574,
+        "narHash": "sha256-O/TsYBgId3a92EAcxiv2WCXI6cX5Jyyjey4cOY32icA=",
         "owner": "noctalia-dev",
         "repo": "noctalia",
-        "rev": "45084cf764f08c1f00e0c7e7432732f225105b7e",
+        "rev": "8c04d5b72906dc8b82a64efe3e191728a1e0bd0d",
         "type": "github"
       },
       "original": {
