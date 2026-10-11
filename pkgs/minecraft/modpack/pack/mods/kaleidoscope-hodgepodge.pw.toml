@@ -1,0 +1,13 @@
+name = "Kaleidoscope Hodgepodge"
+filename = "kaleidoscope_hodgepodge-1.1.0-fabric+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/5Qu2osmI/versions/R78eUnXL/kaleidoscope_hodgepodge-1.1.0-fabric%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "24691a2c77e4005edb48d14827b9f2428411534b890e846d9f46b2c95a0501ad9de5b9843729b1f1d0438fd7243a957338e4f2bea0ad92c0e5ac9c9cef93348b"
+
+[update]
+[update.modrinth]
+mod-id = "5Qu2osmI"
+version = "R78eUnXL"

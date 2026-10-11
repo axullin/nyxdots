@@ -1,0 +1,9 @@
+{
+  "general": {
+    "pickup_food_override": true,
+    "eat_food": true,
+    "time_to_harvest": 40,
+    "debug_renderer": false,
+    "plant_on_tillable": false
+  }
+}

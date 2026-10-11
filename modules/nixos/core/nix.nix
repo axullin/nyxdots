@@ -1,6 +1,11 @@
 {
   flake.modules.nixos.core =
-    { userName, ... }:
+    {
+      config,
+      lib,
+      userName,
+      ...
+    }:
     {
       nix = {
         channel.enable = false;
@@ -42,5 +47,13 @@
 
         };
       };
+
+      # nix.channel.enable does not delete existing channel state, and Nix warns
+      # while /nix/var/nix/profiles/per-user/root/channels is still present.
+      # https://github.com/NixOS/nix/issues/9574
+      system.activationScripts.remove-nix-channels = lib.mkIf (!config.nix.channel.enable) ''
+        rm -rf /nix/var/nix/profiles/per-user/root/channels /root/.nix-defexpr/channels
+        rm -f /root/.nix-channels /nix/var/nix/profiles/per-user/root/channels-*-link
+      '';
     };
 }

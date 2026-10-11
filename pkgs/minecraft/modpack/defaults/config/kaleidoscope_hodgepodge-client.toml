@@ -1,0 +1,13 @@
+[rendering]
+	#Apply stable sub-pixel offsets to ingredient models to prevent z-fighting.
+	modelMicroOffset = true
+	#Animate newly placed ingredient models with a short bounce.
+	placementAnimation = true
+	#Show the first ingredient model in the lower-right quarter of filled wrapping bags in GUI slots.
+	wrappingBagIngredientPreview = true
+	#Show the selected ingredient model in the lower-right quarter of lunch boxes in GUI slots.
+	lunchBoxIngredientPreview = true
+	#Opacity of the ingredient placement preview. Set to 0 to disable it.
+	# Default: 0.4
+	# Range: 0.0 ~ 1.0
+	placementPreviewAlpha = 0.4

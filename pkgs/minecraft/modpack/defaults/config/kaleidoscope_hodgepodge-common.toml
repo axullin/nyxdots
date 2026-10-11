@@ -1,0 +1,39 @@
+[containers]
+	#Maximum ingredient models on a wooden plate.
+	# Default: 20
+	# Range: 1 ~ 20
+	woodenPlateCapacity = 20
+	#Base capacity of porcelain containers.
+	# Default: 40
+	# Range: 1 ~ 40
+	porcelainCapacity = 40
+	#Maximum ingredient models in a porcelain soup bowl.
+	# Default: 40
+	# Range: 1 ~ 40
+	soupCapacity = 40
+	#Dish model floor in pixels.
+	# Default: 2
+	# Range: 0 ~ 15
+	dishBaseHeight = 2
+	#Soup model floor in pixels.
+	# Default: 4
+	# Range: 0 ~ 15
+	soupBaseHeight = 4
+	#Wooden plate placement height in pixels.
+	# Default: 16
+	# Range: 1 ~ 16
+	woodenMaxModelHeight = 16
+	#Porcelain placement height in pixels.
+	# Default: 32
+	# Range: 1 ~ 32
+	porcelainMaxModelHeight = 32
+
+[gameplay]
+	#Allow a filled custom plate item to be eaten directly from the player's hand.
+	allowHandheldDishEating = false
+	#Allow a filled custom soup bowl item to be consumed directly from the player's hand.
+	allowHandheldSoupEating = true
+	#Make ingredient models collide using four 8px by 8px height-map regions per container block.
+	ingredientModelCollision = true
+	#Write additional ingredient interaction diagnostics.
+	debugLogging = false

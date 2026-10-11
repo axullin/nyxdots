@@ -3,6 +3,7 @@
     programs.spotify-player = {
       enable = true;
       settings = {
+        client_id = "eec673bd8161458eb3271107561f7436";
         theme = "monochrome-dark";
         border_type = "Hidden";
         cover_img_display_protocol = "None";

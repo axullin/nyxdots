@@ -22,7 +22,10 @@
           "nvidia_drm"
         ];
 
-        hardware.graphics.enable = true;
+        hardware.graphics = {
+          enable = true;
+          enable32Bit = true;
+        };
         hardware.graphics.extraPackages = with pkgs; [ nvidia-vaapi-driver ];
         services.xserver.videoDrivers = [ "nvidia" ];
         hardware.nvidia = {

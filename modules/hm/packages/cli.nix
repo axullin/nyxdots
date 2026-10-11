@@ -5,7 +5,7 @@
       home.packages = with pkgs; [
         agent-browser
         ast-grep
-        btop
+        btop-rocm
         jq
         tmux
         tree

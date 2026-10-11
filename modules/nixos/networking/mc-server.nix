@@ -10,6 +10,20 @@
     let
       clientFiles = inputs.nix-minecraft.lib.collectFilesAt pkgs.nivel-modpack-client;
 
+      # Everything under defaults/ is what AutoModpack publishes, from
+      # automodpack/host-modpack/main.
+      defaults = ../../../pkgs/minecraft/modpack/defaults;
+      clientDefaults = {
+        "automodpack/host-modpack/main/options.txt" = defaults + "/options.txt";
+      };
+
+      # A symlink to the config directory is not walked. Each file has to be
+      # its own symlink, same as the mod jars, or it never enters the content list.
+      configFiles = lib.mapAttrs' (name: file: {
+        name = "automodpack/host-modpack/main/${name}";
+        value = file;
+      }) (inputs.nix-minecraft.lib.collectFilesAt defaults "config");
+
       hostModpack = lib.mapAttrs' (name: file: {
         name = "automodpack/host-modpack/main/${name}";
         value = file;
@@ -57,16 +71,18 @@
                 allow-flight = true;
                 enable-command-block = false;
                 pvp = true;
-                online-mode = true;
-                level-seed = "-2243532794236063784";
-                level-name = "worldier";
+                online-mode = false;
+                level-seed = "that's_la_peace2137";
+                level-name = "jupiii";
                 white-list = false;
               };
 
               symlinks = {
                 mods = "${pkgs.nivel-modpack-server}/mods";
               }
-              // hostModpack;
+              // hostModpack
+              // configFiles
+              // clientDefaults;
             };
           };
         };

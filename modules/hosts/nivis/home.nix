@@ -6,7 +6,10 @@
       packages
       modeling
       printing3d
+      ai
     ];
+
+    nyx.ai.opencode.enable = true;
 
     nyx.desktop.hyprland.enable = true;
     nyx.desktop.noctalia.enable = true;

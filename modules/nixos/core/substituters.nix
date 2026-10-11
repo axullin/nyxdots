@@ -10,6 +10,8 @@
         "https://niri.cachix.org"
         # Lantian / xuyh0120 attic cache (CachyOS kernel builds)
         "https://attic.xuyh0120.win/lantian"
+        # Alternative CachyOS kernel binary cache (xinux mirror)
+        "https://cache.xinux.uz"
       ];
       extra-trusted-public-keys = [
         # nix-community binary cache
@@ -20,6 +22,8 @@
         "niri.cachix.org-1:Wv0OmO7PsuocRKzfDoJ3mulSl7Z6oezYhGhR+3W2964="
         # Lantian / xuyh0120 attic cache (CachyOS kernel builds)
         "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+        # Alternative CachyOS kernel binary cache (xinux mirror)
+        "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
       ];
     };
   };

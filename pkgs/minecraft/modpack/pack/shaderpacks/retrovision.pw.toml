@@ -1,0 +1,13 @@
+name = "RetroVision"
+filename = "retrovision_v1.80.1.zip"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/BWnGghPW/versions/GWiZz2xP/%C2%A7aretrovision_v1.80.1.zip"
+hash-format = "sha512"
+hash = "82588b5954a526785eba2465ce6ec8967ede20c9f6024dae4c64331139246dbfc8d3c8be5765f4bf0917c49c1f23a65bb35c2240b0f1d58fb2398acd8c82f058"
+
+[update]
+[update.modrinth]
+mod-id = "BWnGghPW"
+version = "GWiZz2xP"

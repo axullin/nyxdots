@@ -1,0 +1,13 @@
+name = "Kaleidoscope Cookery Refabricated"
+filename = "kaleidoscope_cookery-1.6.0.1-fabric+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/Ct11Kuii/versions/6qH7u3em/kaleidoscope_cookery-1.6.0.1-fabric%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "085829a632fcf1b413f95942d1d4c831af7637c85ecf89aefd692f68c92dd5e4e0e103939c2f9ccbef807bc6a8c58954a33c789444a2543437838f6ededa1d5a"
+
+[update]
+[update.modrinth]
+mod-id = "Ct11Kuii"
+version = "6qH7u3em"

@@ -1,0 +1,13 @@
+name = "Clear Water"
+filename = "clearwater-fabric-1.21-3.0.1.jar"
+side = "client"
+
+[download]
+url = "https://cdn.modrinth.com/data/485Cv9lY/versions/9D9HJ0Sc/clearwater-fabric-1.21-3.0.1.jar"
+hash-format = "sha512"
+hash = "f6fb55b71a4d7b084fb59faeabbd13271ff339346678109b71abb34ae5c9d4b784e2bcad2fe27d80fd2d5a01ca33f976087659c5f98f5591bcd03e4d621a82ae"
+
+[update]
+[update.modrinth]
+mod-id = "485Cv9lY"
+version = "9D9HJ0Sc"

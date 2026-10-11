@@ -1,0 +1,13 @@
+name = "Kaleidoscope Nether Refabricated"
+filename = "kaleidoscope_nether-1.1.4-fabric+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/j0n7o8uq/versions/REwy7uVE/kaleidoscope_nether-1.1.4-fabric%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "81ec47ecdf0a070e43d15a6d0739d9b43537bb68f15eb08bcb767c0bc835168b5fccceb0b4c45e8a5c48190d0430f0e26eff616c4ce1817cb990b9b641a67382"
+
+[update]
+[update.modrinth]
+mod-id = "j0n7o8uq"
+version = "REwy7uVE"

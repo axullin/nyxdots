@@ -22,12 +22,11 @@
     in
     {
       options.nyx.printing3d = {
-        enable = lib.mkEnableOption "3D printing apps (OrcaSlicer, Bambu Studio, Bambuddy)";
+        enable = lib.mkEnableOption "3D printing apps (Bambu Studio, Bambuddy)";
       };
 
       config = lib.mkIf cfg.enable {
         home.packages = [
-          pkgs.orca-slicer
           pkgs.bambu-studio
           bambuddyWrapped
         ];

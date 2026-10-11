@@ -1,0 +1,13 @@
+name = "Kaleidoscope End Refabricated"
+filename = "kaleidoscope_end-1.0.7-fabric+mc1.21.1.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/B1KCNlDN/versions/huMyecMq/kaleidoscope_end-1.0.7-fabric%2Bmc1.21.1.jar"
+hash-format = "sha512"
+hash = "f2b40f6e6c0c9bddad5368a1b37784b4c5e575183533f7fc3239c04747f5af3cb0aea7988553c7ccd87bf2553c05d68263861b8dc3fb19ef16d678bdd3a9908d"
+
+[update]
+[update.modrinth]
+mod-id = "B1KCNlDN"
+version = "huMyecMq"

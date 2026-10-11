@@ -8,17 +8,18 @@
         desktop
         gaming
         hardware
+        ai
         networking
         virtualisation
         printing3d
       ];
 
       nyx = {
-        desktop = {
-          hyprland.enable = true;
-        };
+        desktop.hyprland.enable = true;
 
-        hardware.nvidia.enable = true;
+        hardware.amdgpu.enable = true;
+
+        ai.ollama.enable = true;
 
         printing3d.enable = true;
 
@@ -81,19 +82,27 @@
                 # Editors / AI tooling
                 ".cursor"
                 ".config/cursor"
+                ".config/opencode"
+                ".local/share/opencode"
+                ".local/state/opencode"
                 ".local/share/nvim"
                 ".local/state/nvim"
 
                 # Media
+                ".config/kdenlive"
+                ".local/share/kdenlive"
                 ".local/share/krita"
                 ".config/obs-studio"
+                ".cache/spotify"
                 ".cache/spotify-player"
+
+                # Audio device selection
+                ".local/state/wireplumber"
 
                 # 3D modeling / printing
                 ".config/blender"
                 ".config/FreeCAD"
                 ".local/share/FreeCAD"
-                ".config/OrcaSlicer"
                 ".config/BambuStudio"
                 ".local/share/bambuddy"
 
@@ -115,7 +124,7 @@
               ];
 
               files = [
-                # Add files if necesarry
+                ".config/kdenliverc"
               ];
             };
           };

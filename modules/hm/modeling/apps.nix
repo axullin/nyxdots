@@ -17,7 +17,8 @@
       config = lib.mkIf cfg.enable {
         home.packages = with pkgs; [
           blender
-          freecad
+          # unstable's freecad 1.1.4 has no Hydra build; stable 1.1.3 is cached.
+          stable.freecad
         ];
       };
     };

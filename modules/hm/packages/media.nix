@@ -6,9 +6,11 @@
         aseprite
         celluloid
         ffmpeg
+        kdePackages.kdenlive
         krita
         obsidian
         droidcam
+        spotify
       ];
     };
 }

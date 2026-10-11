@@ -1,0 +1,4 @@
+[dragon_tooth_knife]
+	#List of additional mobs treated as End mobs by the Dragon Tooth Knife.
+	#Format: namespace:path
+	extraEndMobs = ["minecraft:enderman", "minecraft:endermite", "minecraft:shulker", "minecraft:ender_dragon"]
