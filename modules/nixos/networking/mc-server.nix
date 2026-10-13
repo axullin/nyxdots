@@ -8,6 +8,7 @@
       ...
     }:
     let
+      cfg = config.nyx.networking.mc-server;
       clientFiles = inputs.nix-minecraft.lib.collectFilesAt pkgs.nivel-modpack-client;
 
       # Everything under defaults/ is what AutoModpack publishes, from
@@ -34,19 +35,27 @@
 
       options.nyx.networking.mc-server = {
         enable = lib.mkEnableOption "Enable the minecraft server";
+
+        dataDir = lib.mkOption {
+          type = lib.types.str;
+          description = "Directory that holds the world and server files.";
+        };
+
+        jvmOpts = lib.mkOption {
+          type = lib.types.str;
+          description = "JVM options for the server, including the heap size.";
+        };
       };
 
-      config = lib.mkIf config.nyx.networking.mc-server.enable {
-
-        # TODO: change the datadir and server enablement into per host options
-        systemd.services.minecraft-server-nivel.unitConfig.RequiresMountsFor = "/mnt/storage";
+      config = lib.mkIf cfg.enable {
+        systemd.services.minecraft-server-nivel.unitConfig.RequiresMountsFor = cfg.dataDir;
 
         networking.firewall.allowedUDPPorts = [ 24454 ];
 
         services.minecraft-servers = {
           enable = true;
           eula = true;
-          dataDir = "/mnt/storage/minecraft";
+          inherit (cfg) dataDir;
 
           servers = {
             nivel = {
@@ -58,7 +67,7 @@
               };
               openFirewall = true;
 
-              jvmOpts = "-Xmx8G -Xms8G";
+              inherit (cfg) jvmOpts;
 
               serverProperties = {
                 motd = "It's all yours.";

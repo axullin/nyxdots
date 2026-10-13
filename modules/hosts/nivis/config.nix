@@ -10,12 +10,16 @@
         hardware
         ai
         networking
+        ssh
         virtualisation
         printing3d
       ];
 
       nyx = {
-        desktop.hyprland.enable = true;
+        desktop = {
+          hyprland.enable = true;
+          davinci-resolve.enable = true;
+        };
 
         hardware.amdgpu.enable = true;
 
@@ -31,6 +35,7 @@
         boot = {
           cachyosKernel.enable = true;
           secure-boot.enable = true;
+          silent-boot.enable = true;
 
           impermanence = {
             enable = true;
@@ -130,7 +135,11 @@
           };
         };
 
-        networking.mc-server.enable = true;
+        networking.mc-server = {
+          enable = false;
+          dataDir = "/mnt/storage/minecraft";
+          jvmOpts = "-Xmx8G -Xms8G";
+        };
       };
 
       networking = {

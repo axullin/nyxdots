@@ -1,8 +1,6 @@
 {
   flake.modules.homeManager.terminal =
     {
-      userName,
-      userEmail,
       pkgs,
       ...
     }:
@@ -21,8 +19,8 @@
 
         settings = {
           user = {
-            name = "${userName}";
-            email = "${userEmail}";
+            name = "axullin";
+            email = "axul.full@gmail.com";
           };
 
           init.defaultBranch = "main";

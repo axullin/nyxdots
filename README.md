@@ -2,15 +2,15 @@
 
 Checklist: 
 
--[] Implement sops-nix/agenix
+-[ ] Implement sops-nix/agenix
 
--[] Configure firefox as my main browser
+-[ ] Configure firefox as my main browser
 
--[] Retire the old packages folder
+-[ ] Retire the old packages folder
 
--[] Choose a desktop shell (noctalia for now)
+-[ ] Choose a desktop shell (noctalia for now)
 
--[] Configure hyprland more (scrolling layout, etc.)
+-[ ] Configure hyprland more (scrolling layout, etc.)
 
--[] ...
+-[ ] ...
 

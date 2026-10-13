@@ -12,19 +12,25 @@
     in
     {
       options.nyx.boot.cachyosKernel.enable = lib.mkEnableOption "Use the cachyos kernel";
+      options.nyx.boot.silent-boot.enable = lib.mkEnableOption "a quiet boot";
 
       config = lib.mkMerge [
         {
           boot = {
             kernelPackages = lib.mkDefault pkgs.linuxPackages_latest;
+            supportedFilesystems = [ "ntfs" ];
+            kernelParams = [ "boot.shell_on_fail" ];
+          };
+        }
+
+        (lib.mkIf cfg.silent-boot.enable {
+          boot = {
             initrd.verbose = false;
             consoleLogLevel = 0;
-            supportedFilesystems = [ "ntfs" ];
             kernelParams = [
               "quiet"
               "console=tty3"
               "splash"
-              "boot.shell_on_fail"
               "systemd.show_status=false"
               "loglevel=3"
               "rd.systemd.show_status=false"
@@ -33,7 +39,7 @@
               "udev.log_priority=3"
             ];
           };
-        }
+        })
 
         (lib.mkIf cfg.cachyosKernel.enable {
           nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];

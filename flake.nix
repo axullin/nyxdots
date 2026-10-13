@@ -7,6 +7,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
     nixpkgs-stable.url = "github:nixos/nixpkgs/release-26.05";
 
+    # Last nixos-unstable with ROCm 7.1.1. needed for resolve
+    # flake = false so this snapshot is not wired into the rest of the flake.
+    nixpkgs-rocm711 = {
+      url = "github:nixos/nixpkgs/c6290c3c1962ea78e67ca5538e6c1b8c0e9d4a76";
+      flake = false;
+    };
+
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
@@ -54,7 +61,6 @@
       flake = false;
     };
     import-tree.url = "github:vic/import-tree";
-    sops-nix.url = "github:Mic92/sops-nix";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     impermanence.url = "github:nix-community/impermanence";
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";

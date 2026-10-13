@@ -114,29 +114,6 @@
           todo-comments.enable = true;
           nvim-surround.enable = true;
 
-          # Notes
-          obsidian = {
-            enable = true;
-            settings = {
-              legacy_commands = false;
-              workspaces = [
-                {
-                  name = "Notes";
-                  path = "/home/${userName}/Notes";
-                }
-              ];
-              ui.enable = false;
-              daily_notes.folder = "daily";
-              checkbox.order = [
-                " "
-                "x"
-              ];
-              note_id_func.__raw = ''require("obsidian.builtin").title_id'';
-            };
-          };
-          render-markdown.enable = true;
-        };
-
         keymaps = [
           # Escape
           {

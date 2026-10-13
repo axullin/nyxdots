@@ -27,7 +27,6 @@
         users.${userName} = {
           imports = [
             config.flake.modules.homeManager.core
-            config.flake.modules.homeManager.terminal
             config.flake.modules.homeManager.${hostName}
           ];
         };

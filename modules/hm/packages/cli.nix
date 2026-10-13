@@ -7,7 +7,6 @@
         ast-grep
         btop-rocm
         jq
-        tmux
         tree
         unzip
         yazi
