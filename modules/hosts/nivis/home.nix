@@ -11,6 +11,7 @@
     ];
 
     nyx.ai.opencode.enable = true;
+    nyx.ai.pi.enable = true;
 
     nyx.desktop.hyprland.enable = true;
     nyx.desktop.noctalia.enable = true;

@@ -90,12 +90,16 @@
                 ".config/opencode"
                 ".local/share/opencode"
                 ".local/state/opencode"
+                ".pi/agent"
                 ".local/share/nvim"
                 ".local/state/nvim"
+                ".local/share/godot"
+                ".config/godot"
 
                 # Media
                 ".config/kdenlive"
                 ".local/share/kdenlive"
+                ".local/share/DavinciResolve"
                 ".local/share/krita"
                 ".config/obs-studio"
                 ".cache/spotify"

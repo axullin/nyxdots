@@ -19,7 +19,7 @@
         };
 
         networking.mc-server = {
-          enable = false;
+          enable = true;
           dataDir = "/srv/minecraft";
           jvmOpts = "-Xmx4G -Xms4G";
         };
