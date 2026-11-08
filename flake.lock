@@ -706,6 +706,22 @@
         "type": "github"
       }
     },
+    "modpacks": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1794164937,
+        "narHash": "sha256-1urUdb5JYPAEQ+KT7HRYx8xZ83cvSnrI1Kiq5P2EMSw=",
+        "owner": "axullin",
+        "repo": "modpacks",
+        "rev": "e988dd2721407fa9b190b5468e278988e6f3107f",
+        "type": "github"
+      },
+      "original": {
+        "owner": "axullin",
+        "repo": "modpacks",
+        "type": "github"
+      }
+    },
     "nix-cachyos-kernel": {
       "inputs": {
         "flake-compat": "flake-compat_4",
@@ -1111,6 +1127,7 @@
         "impermanence": "impermanence",
         "import-tree": "import-tree",
         "lanzaboote": "lanzaboote",
+        "modpacks": "modpacks",
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nix-flatpak": "nix-flatpak",
         "nix-minecraft": "nix-minecraft",

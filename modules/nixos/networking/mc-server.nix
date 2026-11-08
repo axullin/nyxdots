@@ -11,8 +11,8 @@
       cfg = config.nyx.networking.mc-server;
       clientFiles = inputs.nix-minecraft.lib.collectFilesAt pkgs.nivel-modpack-client;
 
-      defaults = ../../../pkgs/minecraft/modpack/defaults;
-      serverConfig = ../../../pkgs/minecraft/modpack/server-config;
+      defaults = "${inputs.modpacks}/nivel/defaults";
+      serverConfig = "${inputs.modpacks}/nivel/server-config";
       clientDefaults = {
         "automodpack/host-modpack/main/options.txt" = defaults + "/options.txt";
       };
@@ -114,7 +114,7 @@
               files = {
                 "config/NoChatReports/NCR-Common.json" = serverConfig + "/NoChatReports/NCR-Common.json";
                 "config/xaero" = serverConfig + "/xaero";
-                "nibel/datapacks/nivel-fixes" = ../../../pkgs/minecraft/modpack/datapacks/nivel-fixes;
+                "nibel/datapacks/nivel-fixes" = "${inputs.modpacks}/nivel/datapacks/nivel-fixes";
               };
             };
 

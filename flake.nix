@@ -60,6 +60,10 @@
       url = "github:axullin/assets";
       flake = false;
     };
+    modpacks = {
+      url = "github:axullin/modpacks";
+      flake = false;
+    };
     import-tree.url = "github:vic/import-tree";
     treefmt-nix.url = "github:numtide/treefmt-nix";
     impermanence.url = "github:nix-community/impermanence";

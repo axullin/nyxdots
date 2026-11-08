@@ -1,4 +1,4 @@
-{ lib, config, ... }:
+{ lib, config, inputs, ... }:
 {
   perSystem =
     { pkgs, system, ... }:
@@ -9,7 +9,7 @@
     in
     {
       packages =
-        import ../../pkgs { inherit pkgs; }
+        import ../../pkgs { inherit pkgs inputs; }
         // lib.mapAttrs (_: host: host.config.system.build.toplevel) hostsForSystem;
     };
 }
