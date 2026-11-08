@@ -10,7 +10,8 @@
     }:
     let
       # Hosts that do not import boot have no impermanence option.
-      impermanent = ((options.nyx or { }).boot or { }) ? impermanence && config.nyx.boot.impermanence.enable;
+      impermanent =
+        ((options.nyx or { }).boot or { }) ? impermanence && config.nyx.boot.impermanence.enable;
     in
     {
       programs.fish.enable = true;

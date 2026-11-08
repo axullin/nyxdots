@@ -18,7 +18,10 @@
       nyx = {
         desktop = {
           hyprland.enable = true;
-          davinci-resolve.enable = true;
+          davinci-resolve = {
+            enable = false;
+            studio = true;
+          };
         };
 
         hardware.amdgpu.enable = true;

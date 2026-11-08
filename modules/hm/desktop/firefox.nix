@@ -2,7 +2,7 @@
   flake.modules.homeManager.desktop =
     { inputs, pkgs, ... }:
     let
-      addons = inputs.firefox-addons.packages.${pkgs.stdenv.hostPlatform.system};
+      addons = (pkgs.extend inputs.firefox-addons.overlays.default).firefox-addons;
     in
     {
       programs.firefox = {
@@ -23,6 +23,7 @@
             multi-account-containers
             refined-github
             tridactyl
+            youtube-recommended-videos
           ];
         };
       };
@@ -38,7 +39,6 @@
       };
 
       xdg.configFile."tridactyl/tridactylrc".text = ''
-        " Managed by this flake. Stock Tridactyl binds; add commands below.
       '';
     };
 }
