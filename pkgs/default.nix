@@ -6,10 +6,10 @@
 
   nivel-modpack-server = pkgs.callPackage ./minecraft/modpack {
     side = "server";
-    packHash = "sha256-OwFu75JgpRLN2dXUDDhwSezLFbYmPZMow1cFr5aCZZo=";
+    packHash = "sha256-4Ggm0MrgLgz4V+35xEwlnqHP3VQbg7PN2WcBVs2v78c=";
   };
   nivel-modpack-client = pkgs.callPackage ./minecraft/modpack {
     side = "client";
-    packHash = "sha256-/Ubz87YlZDuuUb8L1jMrebhxo3zcTDwqFsAd4LTF5w0=";
+    packHash = "sha256-8/P/xwjmaj6S3A9bKAHr/X+mriS0m48BhCzV82JhBVU=";
   };
 }

@@ -11,15 +11,12 @@
       cfg = config.nyx.networking.mc-server;
       clientFiles = inputs.nix-minecraft.lib.collectFilesAt pkgs.nivel-modpack-client;
 
-      # Everything under defaults/ is what AutoModpack publishes, from
-      # automodpack/host-modpack/main.
       defaults = ../../../pkgs/minecraft/modpack/defaults;
+      serverConfig = ../../../pkgs/minecraft/modpack/server-config;
       clientDefaults = {
         "automodpack/host-modpack/main/options.txt" = defaults + "/options.txt";
       };
 
-      # A symlink to the config directory is not walked. Each file has to be
-      # its own symlink, same as the mod jars, or it never enters the content list.
       configFiles = lib.mapAttrs' (name: file: {
         name = "automodpack/host-modpack/main/${name}";
         value = file;
@@ -29,6 +26,28 @@
         name = "automodpack/host-modpack/main/${name}";
         value = file;
       }) (clientFiles "mods" // clientFiles "resourcepacks" // clientFiles "shaderpacks");
+
+      # Aikar's G1 flags
+      gcFlags = lib.concatStringsSep " " [
+        "-XX:+UseG1GC"
+        "-XX:+ParallelRefProcEnabled"
+        "-XX:MaxGCPauseMillis=200"
+        "-XX:+UnlockExperimentalVMOptions"
+        "-XX:+DisableExplicitGC"
+        "-XX:+AlwaysPreTouch"
+        "-XX:G1NewSizePercent=30"
+        "-XX:G1MaxNewSizePercent=40"
+        "-XX:G1HeapRegionSize=8M"
+        "-XX:G1ReservePercent=20"
+        "-XX:G1HeapWastePercent=5"
+        "-XX:G1MixedGCCountTarget=4"
+        "-XX:InitiatingHeapOccupancyPercent=15"
+        "-XX:G1MixedGCLiveThresholdPercent=90"
+        "-XX:G1RSetUpdatingPauseTimePercent=5"
+        "-XX:SurvivorRatio=32"
+        "-XX:+PerfDisableSharedMem"
+        "-XX:MaxTenuringThreshold=1"
+      ];
     in
     {
       imports = [ inputs.nix-minecraft.nixosModules.minecraft-servers ];
@@ -38,12 +57,12 @@
 
         dataDir = lib.mkOption {
           type = lib.types.str;
-          description = "Directory that holds the world and server files.";
+          description = "Server directory";
         };
 
         jvmOpts = lib.mkOption {
           type = lib.types.str;
-          description = "JVM options for the server, including the heap size.";
+          description = "JVM options for the server";
         };
       };
 
@@ -59,19 +78,19 @@
 
           servers = {
             nivel = {
-              enable = false;
+              openFirewall = true;
+              enable = true;
               package = pkgs.fabricServers.fabric-1_21_1.override {
                 loaderVersion = pkgs.nivel-modpack-server.loaderVersion;
               };
-              openFirewall = true;
 
-              inherit (cfg) jvmOpts;
+              jvmOpts = "${cfg.jvmOpts} ${gcFlags}";
 
               serverProperties = {
                 motd = "It's all yours.";
                 difficulty = "normal";
                 gamemode = "survival";
-                view-distance = 14;
+                view-distance = 10;
                 simulation-distance = 8;
                 max-players = 8;
                 spawn-protection = 0;
@@ -79,17 +98,24 @@
                 enable-command-block = false;
                 pvp = true;
                 online-mode = false;
-                level-seed = "that's_la_peace2137";
-                level-name = "jupiii";
+                level-seed = "";
+                level-name = "nibel";
                 white-list = false;
               };
 
               symlinks = {
                 mods = "${pkgs.nivel-modpack-server}/mods";
+                "config/mobcontrol.toml" = serverConfig + "/mobcontrol.toml";
               }
               // hostModpack
               // configFiles
               // clientDefaults;
+
+              files = {
+                "config/NoChatReports/NCR-Common.json" = serverConfig + "/NoChatReports/NCR-Common.json";
+                "config/xaero" = serverConfig + "/xaero";
+                "nibel/datapacks/nivel-fixes" = ../../../pkgs/minecraft/modpack/datapacks/nivel-fixes;
+              };
             };
 
             backrooms = {
@@ -97,7 +123,7 @@
               package = pkgs.fabricServers.fabric-1_20_1.override { loaderVersion = "0.19.5"; };
               openFirewall = true;
 
-              inherit (cfg) jvmOpts;
+              jvmOpts = "${cfg.jvmOpts} ${gcFlags}";
 
               serverProperties = {
                 motd = "A server made for playing the backrooms mod";

@@ -1,0 +1,85 @@
+
+[general]
+debug=false
+use-generation-check=false
+
+# UWAGA: mob z wlasnym wpisem nie wraca do reguly "*". Jesli zadna jego regula
+# nie pasuje, spawn jest anulowany, a mob bez reguly usuwany ze swiata.
+# type="block" konczy sprawdzanie od razu i ignoruje run oraz dimension.
+# Szanse ustawia sie wiec regula type="all": run to procent mobow, ktore zostaja.
+
+# Dodatkowe zwierzeta
+[[mob]]
+name=[
+  "minecraft:cow",
+  "minecraft:sheep",
+  "minecraft:pig",
+  "minecraft:chicken"
+]
+
+[[mob.rule]]
+type="control"
+run=100
+repeat=1200
+dimension="minecraft:overworld"
+spawn.count=[3,5]
+spawn.distance=[10,80]
+spawn.additional-checks="yes"
+max-per-player=32
+
+# Spawn naturalny, rozmnazanie i zwierzeta juz zapisane w swiecie
+[[mob.rule]]
+type="all"
+
+# Zombie i szkielety: 20% mniej w overworldzie
+[[mob]]
+name=["minecraft:zombie","minecraft:skeleton"]
+
+[[mob.rule]]
+type="all"
+dimension=["minecraft:the_nether","minecraft:the_end"]
+
+[[mob.rule]]
+type="all"
+run=80
+dimension="minecraft:overworld"
+
+# Creepery: 50% mniej w overworldzie
+[[mob]]
+name="minecraft:creeper"
+
+[[mob.rule]]
+type="all"
+dimension=["minecraft:the_nether","minecraft:the_end"]
+
+[[mob.rule]]
+type="all"
+run=50
+dimension="minecraft:overworld"
+
+# Pajaki: 10% mniej w overworldzie
+[[mob]]
+name="minecraft:spider"
+
+[[mob.rule]]
+type="all"
+dimension=["minecraft:the_nether","minecraft:the_end"]
+
+[[mob.rule]]
+type="all"
+run=90
+dimension="minecraft:overworld"
+
+# Phantomy: wylaczone (naturalnie pojawiaja sie tylko w overworldzie)
+[[mob]]
+name="minecraft:phantom"
+
+[[mob.rule]]
+type="block"
+
+# Pozostale moby
+[[mob]]
+name="*"
+
+[[mob.rule]]
+type="all"

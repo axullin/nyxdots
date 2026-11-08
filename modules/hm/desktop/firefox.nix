@@ -38,7 +38,6 @@
         };
       };
 
-      xdg.configFile."tridactyl/tridactylrc".text = ''
-      '';
+      xdg.configFile."tridactyl/tridactylrc".text = "";
     };
 }

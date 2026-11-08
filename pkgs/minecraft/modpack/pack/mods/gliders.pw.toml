@@ -1,0 +1,13 @@
+name = "Gliders"
+filename = "gliders-1.21.1-fabric-1.1.8.jar"
+side = "both"
+
+[download]
+url = "https://cdn.modrinth.com/data/XiC6HzoU/versions/cgD3wLtR/gliders-1.21.1-fabric-1.1.8.jar"
+hash-format = "sha512"
+hash = "15fc392127c5d1db49072ce746a5fe7b5cc2505c18a5bfc180f29881a90e872531e760757e977bc62676a2238db00e1ce9c0ba12d6bc8fdde2356514af3b1fb3"
+
+[update]
+[update.modrinth]
+mod-id = "XiC6HzoU"
+version = "cgD3wLtR"

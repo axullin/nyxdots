@@ -1,0 +1,18 @@
+{
+  "fabric:load_conditions": [
+    {
+      "condition": "hauntedharvest:flag",
+      "flag": "corn"
+    }
+  ],
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "tag": "c:crops/corn"
+  },
+  "result": {
+    "count": 1,
+    "id": "hauntedharvest:corn_on_the_cob"
+  },
+  "experience": 0.35,
+  "cookingtime": 100
+}
