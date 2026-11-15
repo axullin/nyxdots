@@ -149,9 +149,17 @@
               }
             ];
 
-            workspace_rule = {
-              workspace = "special:music";
-              on_created_empty = "kitty -e spotify_player";
+            on = {
+              _args = [
+                "workspace.created"
+                (mkLuaInline ''
+                  function(ws)
+                    if ws.name ~= "special:music" then return end
+                    if not ws.is_empty then return end
+                    hl.exec_cmd("kitty -e spotify_player", { workspace = ws.name .. " silent" })
+                  end
+                '')
+              ];
             };
 
             bind = [

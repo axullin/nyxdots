@@ -19,14 +19,18 @@
         desktop = {
           hyprland.enable = true;
           davinci-resolve = {
-            enable = false;
+            enable = true;
             studio = true;
+            aacFix = true;
+            extraCommands = ''
+            '';
           };
         };
 
         hardware.amdgpu.enable = true;
+        hardware.zram.enable = true;
 
-        ai.ollama.enable = true;
+        ai.ollama.enable = false;
 
         printing3d.enable = true;
 

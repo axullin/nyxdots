@@ -14,6 +14,11 @@
       flake = false;
     };
 
+    nixpkgs-resolve2104 = {
+      url = "github:nixos/nixpkgs/858bbc25e2425a018ab9969bc939b701ce886e89";
+      flake = false;
+    };
+
     flake-parts = {
       url = "github:hercules-ci/flake-parts";
       inputs.nixpkgs-lib.follows = "nixpkgs";
