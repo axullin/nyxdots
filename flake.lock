@@ -707,7 +707,14 @@
       }
     },
     "modpacks": {
-      "flake": false,
+      "inputs": {
+        "nix-minecraft": [
+          "nix-minecraft"
+        ],
+        "nixpkgs": [
+          "nixpkgs"
+        ]
+      },
       "locked": {
         "lastModified": 1794488533,
         "narHash": "sha256-aZHVAF3wr5WHC5c22UOG7xyTUGw/FB4Q1gX/gwW+ZkE=",

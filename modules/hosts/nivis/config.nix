@@ -10,6 +10,7 @@
         hardware
         ai
         networking
+        minecraft
         ssh
         virtualisation
         printing3d
@@ -22,8 +23,7 @@
             enable = true;
             studio = true;
             aacFix = true;
-            extraCommands = ''
-            '';
+            extraCommands = "";
           };
         };
 
@@ -146,10 +146,11 @@
           };
         };
 
-        networking.mc-server = {
+        minecraft = {
           enable = false;
           dataDir = "/mnt/storage/minecraft";
           jvmOpts = "-Xmx8G -Xms8G";
+          nivel.enable = true;
         };
       };
 

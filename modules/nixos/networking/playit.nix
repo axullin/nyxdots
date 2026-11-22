@@ -14,7 +14,9 @@
     {
       imports = [ inputs.playit.nixosModules.default ];
 
-      config = lib.mkIf config.nyx.networking.mc-server.enable {
+      options.nyx.networking.playit.enable = lib.mkEnableOption "the playit.gg tunnel";
+
+      config = lib.mkIf config.nyx.networking.playit.enable {
         services.playit = {
           enable = true;
           secretPath = "${lib.optionalString impermanent "/persist"}/playit/secret.toml";

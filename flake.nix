@@ -67,7 +67,8 @@
     };
     modpacks = {
       url = "github:axullin/modpacks";
-      flake = false;
+      inputs.nixpkgs.follows = "nixpkgs";
+      inputs.nix-minecraft.follows = "nix-minecraft";
     };
     import-tree.url = "github:vic/import-tree";
     treefmt-nix.url = "github:numtide/treefmt-nix";
