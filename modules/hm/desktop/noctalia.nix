@@ -22,6 +22,12 @@
       imports = [ inputs.noctalia.homeModules.default ];
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.directories = [
+          ".config/noctalia"
+          ".local/share/noctalia"
+          ".local/state/noctalia"
+        ];
+
         programs.noctalia = {
           enable = true;
           package = inputs.noctalia.packages.${pkgs.stdenv.hostPlatform.system}.default;

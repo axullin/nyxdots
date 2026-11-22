@@ -5,6 +5,8 @@
       ...
     }:
     {
+      nyx.impermanence.home.directories = [ ".cache/nix" ];
+
       nix = {
         channel.enable = false;
 

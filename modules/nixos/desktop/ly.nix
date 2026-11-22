@@ -1,5 +1,7 @@
 {
   flake.modules.nixos.desktop = {
+    nyx.impermanence.files = [ "/etc/ly/save.txt" ];
+
     services.displayManager = {
       ly = {
         enable = true;

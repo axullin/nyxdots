@@ -4,6 +4,11 @@
     {
       imports = [ inputs.nixvim.homeModules.nixvim ];
 
+      nyx.impermanence.directories = [
+        ".local/share/nvim"
+        ".local/state/nvim"
+      ];
+
       programs.nixvim = {
         enable = true;
 

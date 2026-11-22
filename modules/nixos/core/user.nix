@@ -1,7 +1,6 @@
 {
   flake.modules.nixos.core =
     {
-      options,
       config,
       pkgs,
       lib,
@@ -9,9 +8,7 @@
       ...
     }:
     let
-      # Hosts that do not import boot have no impermanence option.
-      impermanent =
-        ((options.nyx or { }).boot or { }) ? impermanence && config.nyx.boot.impermanence.enable;
+      impermanence = config.nyx.impermanence;
     in
     {
       programs.fish.enable = true;
@@ -34,10 +31,10 @@
       };
 
       users = {
-        mutableUsers = !impermanent;
+        mutableUsers = !impermanence.enable;
         defaultUserShell = pkgs.fish;
         users.${userName} = {
-          hashedPasswordFile = "/persist/passwords/${userName}";
+          hashedPasswordFile = lib.mkIf impermanence.enable "${impermanence.path}/passwords/${userName}";
           isNormalUser = true;
           extraGroups = [
             "networkmanager"

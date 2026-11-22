@@ -209,7 +209,7 @@
         ];
 
         # Prefs, project library, cache, logs, and the Studio license.
-        nyx.boot.impermanence.home.directories = [
+        nyx.impermanence.home.directories = [
           ".local/share/DaVinciResolve"
         ];
       };

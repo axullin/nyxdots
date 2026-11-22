@@ -5,6 +5,8 @@
       addons = (pkgs.extend inputs.firefox-addons.overlays.default).firefox-addons;
     in
     {
+      nyx.impermanence.directories = [ ".mozilla/firefox" ];
+
       programs.firefox = {
         enable = true;
         configPath = ".mozilla/firefox";

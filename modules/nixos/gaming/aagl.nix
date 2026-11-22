@@ -27,6 +27,10 @@
       };
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.home.directories =
+          lib.optional cfg."anime-game-launcher".enable
+            ".local/share/anime-game-launcher";
+
         programs = {
           anime-game-launcher.enable = cfg."anime-game-launcher".enable;
           honkers-railway-launcher.enable = cfg."honkers-railway-launcher".enable;

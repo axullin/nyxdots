@@ -11,16 +11,15 @@
     in
     {
       options.nyx.ai.pi = {
-        enable = lib.mkEnableOption "Pi coding agent against the local Ollama server";
+        enable = lib.mkEnableOption "Pi coding agent with the local Ollama server";
       };
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.directories = [ ".pi/agent" ];
+
         programs.pi-coding-agent = {
           enable = true;
 
-          # Pi installs settings.packages with npm at startup. agent-browser
-          # is the CLI that extension calls. mcp-nixos is named by absolute
-          # path in mcp.json.
           extraPackages = [
             pkgs.nodejs_24
             pkgs.agent-browser
@@ -37,8 +36,6 @@
             ];
           };
 
-          # Q3 weights stay on the 16 GB card. The 256k KV cache is in RAM
-          # and is about 22 GB on this architecture.
           models.providers.ollama = {
             baseUrl = "http://127.0.0.1:11434/v1";
             api = "openai-completions";

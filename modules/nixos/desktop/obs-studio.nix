@@ -2,6 +2,8 @@
   flake.modules.nixos.desktop =
     { pkgs, ... }:
     {
+      nyx.impermanence.home.directories = [ ".config/obs-studio" ];
+
       programs.obs-studio = {
         enable = true;
         enableVirtualCamera = true;

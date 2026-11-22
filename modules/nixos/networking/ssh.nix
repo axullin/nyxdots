@@ -1,7 +1,6 @@
 {
   flake.modules.nixos.ssh =
     {
-      options,
       config,
       lib,
       userName,
@@ -9,8 +8,6 @@
     }:
     let
       cfg = config.nyx.ssh;
-      persistHostKeys =
-        ((options.nyx or { }).boot or { }) ? impermanence && config.nyx.boot.impermanence.enable;
     in
     {
       options.nyx.ssh = {
@@ -46,7 +43,7 @@
 
           hostKeys = [
             {
-              path = "${lib.optionalString persistHostKeys "/persist"}/etc/ssh/ssh_host_ed25519_key";
+              path = "${config.nyx.impermanence.prefix}/etc/ssh/ssh_host_ed25519_key";
               type = "ed25519";
             }
           ];

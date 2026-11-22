@@ -15,7 +15,6 @@
         boot = {
           cachyosKernel.enable = false;
           secure-boot.enable = false;
-          impermanence.enable = false;
           grub.enable = true;
         };
 

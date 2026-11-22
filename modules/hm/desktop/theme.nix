@@ -2,6 +2,8 @@
   flake.modules.homeManager.desktop =
     { pkgs, ... }:
     {
+      nyx.impermanence.directories = [ ".config/dconf" ];
+
       home.pointerCursor = {
         enable = true;
         name = "Bibata-Original-Classic";

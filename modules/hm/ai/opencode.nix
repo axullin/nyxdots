@@ -10,10 +10,16 @@
     in
     {
       options.nyx.ai.opencode = {
-        enable = lib.mkEnableOption "OpenCode against the local Ollama server";
+        enable = lib.mkEnableOption "OpenCode with the local Ollama server";
       };
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.directories = [
+          ".config/opencode"
+          ".local/share/opencode"
+          ".local/state/opencode"
+        ];
+
         programs.opencode = {
           enable = true;
 

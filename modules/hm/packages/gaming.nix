@@ -12,6 +12,12 @@
           });
     in
     {
+      nyx.impermanence.directories = [
+        ".local/share/Celeste"
+        ".config/Olympus"
+        ".local/share/PrismLauncher"
+      ];
+
       home.packages = with pkgs; [
         prismlauncher'
         (olympus.override {

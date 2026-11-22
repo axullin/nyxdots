@@ -26,6 +26,11 @@
       };
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.directories = [
+          ".config/BambuStudio"
+          ".local/share/bambuddy"
+        ];
+
         home.packages = [
           pkgs.bambu-studio
           bambuddyWrapped

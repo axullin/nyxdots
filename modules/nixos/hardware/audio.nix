@@ -2,6 +2,9 @@
   flake.modules.nixos.hardware =
     { pkgs, ... }:
     {
+      # Selected audio devices
+      nyx.impermanence.home.directories = [ ".local/state/wireplumber" ];
+
       security.rtkit.enable = true;
 
       # Run JACK apps through the `pw-jack` wrapper instead of services.pipewire.jack

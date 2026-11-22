@@ -4,6 +4,11 @@
     {
       imports = [ inputs.nixcord.homeModules.nixcord ];
 
+      nyx.impermanence.directories = [
+        ".config/discord"
+        ".config/Vencord"
+      ];
+
       programs.nixcord = {
         enable = true;
         discord.vencord.enable = true;

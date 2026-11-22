@@ -11,10 +11,12 @@
     in
     {
       options.nyx.modeling = {
-        enable = lib.mkEnableOption "3D modeling apps (Blender, FreeCAD)";
+        enable = lib.mkEnableOption "3D modeling apps";
       };
 
       config = lib.mkIf cfg.enable {
+        nyx.impermanence.directories = [ ".config/blender" ];
+
         home.packages = with pkgs; [
           blender
         ];

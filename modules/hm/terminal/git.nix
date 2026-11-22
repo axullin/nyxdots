@@ -10,6 +10,8 @@
         lazygit
       ];
 
+      nyx.impermanence.directories = [ ".config/gh" ];
+
       programs.git = {
         enable = true;
         signing = {
