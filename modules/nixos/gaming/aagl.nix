@@ -38,11 +38,11 @@
 
         nix.settings = {
           extra-substituters = [
-            # AAGL / anime-game-launcher binary cache
+            # AAGL binary cache
             "https://ezkea.cachix.org"
           ];
           extra-trusted-public-keys = [
-            # AAGL / anime-game-launcher binary cache
+            # AAGL binary cache
             "ezkea.cachix.org-1:ioBmUbJTZIKsHmWWXPe1FSFbeVe+afhfgqgTSNd34eI="
           ];
         };

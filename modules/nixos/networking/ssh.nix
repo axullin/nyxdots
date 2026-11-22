@@ -58,7 +58,7 @@
             AuthenticationMethods = "publickey";
             PubkeyAuthentication = "yes";
             X11Forwarding = false;
-            UsePAM = false;
+            UsePAM = true;
             UseDns = false;
           }
           // cfg.settings;
