@@ -31,7 +31,10 @@
             stable = lib.mkOption {
               type = lib.types.bool;
               default = false;
-              description = "Turn on to use stable nixpkgs defined in the flake";
+              description = ''
+                Build the host from nixpkgs-stable and home-manager-stable. Other inputs
+                still follow unstable nixpkgs, so their modules may need checking.
+              '';
             };
 
             bundles = lib.mkOption {
@@ -52,10 +55,11 @@
     hostName: host:
     let
       nixpkgs = if host.stable then inputs.nixpkgs-stable else inputs.nixpkgs;
+      homeManager = if host.stable then inputs.home-manager-stable else inputs.home-manager;
     in
     nixpkgs.lib.nixosSystem {
       specialArgs = {
-        inherit inputs hostName;
+        inherit inputs hostName homeManager;
         inherit (host)
           system
           userName

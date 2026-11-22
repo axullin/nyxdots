@@ -3,13 +3,14 @@
   flake.modules.nixos.core =
     {
       inputs,
+      homeManager,
       hostName,
       userName,
       userEmail,
       ...
     }:
     {
-      imports = [ inputs.home-manager.nixosModules.home-manager ];
+      imports = [ homeManager.nixosModules.home-manager ];
 
       home-manager = {
         backupFileExtension = "bak";

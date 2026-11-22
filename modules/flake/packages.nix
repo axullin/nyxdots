@@ -9,7 +9,7 @@
     { pkgs, system, ... }:
     let
       hostsForSystem = lib.filterAttrs (
-        _: host: host.config.nixpkgs.hostPlatform.system == system
+        hostName: _: config.nyx.hosts.${hostName}.system == system
       ) config.flake.nixosConfigurations;
     in
     {
