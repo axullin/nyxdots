@@ -6,6 +6,7 @@
       config,
       inputs,
       userName,
+      osConfig,
       ...
     }:
     let
@@ -16,7 +17,9 @@
     in
     {
       options.nyx.desktop.noctalia = {
-        enable = lib.mkEnableOption "enable the Noctalia desktop shell";
+        enable = lib.mkEnableOption "the Noctalia desktop shell" // {
+          default = osConfig.nyx.desktop.noctalia.enable or false;
+        };
       };
 
       imports = [ inputs.noctalia.homeModules.default ];

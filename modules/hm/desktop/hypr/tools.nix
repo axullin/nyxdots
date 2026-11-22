@@ -10,10 +10,6 @@
       cfg = config.nyx.desktop.hyprland;
     in
     {
-      options.nyx.desktop.hyprland = {
-        enable = lib.mkEnableOption "Enable Hyprland";
-      };
-
       config = lib.mkIf cfg.enable {
         nyx.impermanence.directories = [ ".cache/awww" ];
 

@@ -11,7 +11,6 @@
         ai
         networking
         minecraft
-        ssh
         virtualisation
         printing3d
       ];
@@ -19,6 +18,7 @@
       nyx = {
         desktop = {
           hyprland.enable = true;
+          noctalia.enable = true;
           davinci-resolve = {
             enable = true;
             studio = true;

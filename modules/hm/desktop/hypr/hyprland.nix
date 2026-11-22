@@ -1,6 +1,11 @@
 {
   flake.modules.homeManager.desktop =
-    { lib, config, ... }:
+    {
+      lib,
+      config,
+      osConfig,
+      ...
+    }:
     let
       cfg = config.nyx.desktop.hyprland;
       inherit (lib.generators) mkLuaInline;
@@ -36,6 +41,12 @@
       ) (lib.range 1 10);
     in
     {
+      options.nyx.desktop.hyprland = {
+        enable = lib.mkEnableOption "the Hyprland user config" // {
+          default = osConfig.nyx.desktop.hyprland.enable or false;
+        };
+      };
+
       config = lib.mkIf cfg.enable {
         wayland.windowManager.hyprland = {
           enable = true;

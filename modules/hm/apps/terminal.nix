@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.packages =
+  flake.modules.homeManager.apps =
     { pkgs, ... }:
     {
       nyx.impermanence.directories = [ ".config/kotofetch" ];

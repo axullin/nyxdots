@@ -12,6 +12,12 @@
     {
       options.nyx.hardware.nvidia = {
         enable = lib.mkEnableOption "the proprietary Nvidia driver";
+
+        package = lib.mkOption {
+          type = lib.types.package;
+          default = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+          description = "Driver package, from config.boot.kernelPackages.nvidiaPackages";
+        };
       };
 
       config = lib.mkIf cfg.enable {
@@ -33,7 +39,7 @@
           powerManagement.enable = true;
           nvidiaSettings = true;
           open = false;
-          package = config.boot.kernelPackages.nvidiaPackages.legacy_580;
+          inherit (cfg) package;
         };
 
         environment.sessionVariables = {

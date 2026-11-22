@@ -1,5 +1,5 @@
 {
-  flake.modules.homeManager.packages =
+  flake.modules.homeManager.apps =
     { pkgs, ... }:
     let
       # WaterMedia looks for libvlc on LD_LIBRARY_PATH, then loads codecs from VLC_PLUGIN_PATH.

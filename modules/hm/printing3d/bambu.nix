@@ -4,6 +4,7 @@
       pkgs,
       lib,
       config,
+      osConfig,
       ...
     }:
     let
@@ -22,7 +23,9 @@
     in
     {
       options.nyx.printing3d = {
-        enable = lib.mkEnableOption "3D printing apps (Bambu Studio, Bambuddy)";
+        enable = lib.mkEnableOption "3D printing apps (Bambu Studio, Bambuddy)" // {
+          default = osConfig.nyx.printing3d.enable or false;
+        };
       };
 
       config = lib.mkIf cfg.enable {

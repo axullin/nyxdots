@@ -1,5 +1,5 @@
 {
-  flake.modules.nixos.ssh =
+  flake.modules.nixos.networking =
     {
       config,
       lib,
@@ -7,10 +7,10 @@
       ...
     }:
     let
-      cfg = config.nyx.ssh;
+      cfg = config.nyx.networking.ssh;
     in
     {
-      options.nyx.ssh = {
+      options.nyx.networking.ssh = {
         ports = lib.mkOption {
           type = lib.types.listOf lib.types.port;
           default = [ 22 ];
