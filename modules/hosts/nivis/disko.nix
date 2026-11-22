@@ -6,7 +6,7 @@
 
       disko.devices = {
         disk = {
-          # /boot — p4, vfat 1G
+
           boot = {
             device = "/dev/disk/by-uuid/0CFE-86A6";
             type = "disk";
@@ -17,7 +17,7 @@
               mountOptions = [ "umask=0077" ];
             };
           };
-          # NixOS btrfs — p6, 135G
+
           nixos = {
             device = "/dev/disk/by-uuid/8619ee23-2e5e-493f-84a6-13f64f2df347";
             type = "disk";
@@ -48,7 +48,6 @@
           };
         };
 
-        # Ephemeral root — wiped on every reboot
         nodev."/" = {
           fsType = "tmpfs";
           mountOptions = [

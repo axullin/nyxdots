@@ -1,7 +1,12 @@
 { inputs, ... }:
 {
   flake.overlays = {
-    additions = final: _prev: import ../../pkgs { pkgs = final; inherit inputs; };
+    additions =
+      final: _prev:
+      import ../../pkgs {
+        pkgs = final;
+        inherit inputs;
+      };
 
     minecraft = inputs.nix-minecraft.overlay;
 

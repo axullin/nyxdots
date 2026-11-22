@@ -1,4 +1,9 @@
-{ lib, config, inputs, ... }:
+{
+  lib,
+  config,
+  inputs,
+  ...
+}:
 {
   perSystem =
     { pkgs, system, ... }:
