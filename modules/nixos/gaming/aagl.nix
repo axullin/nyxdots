@@ -27,9 +27,6 @@
       };
 
       config = lib.mkIf cfg.enable {
-        # Upstream main tracks nixpkgs 26.11; disable if unstable's release string differs.
-        aagl.enableNixpkgsReleaseBranchCheck = false;
-
         programs = {
           anime-game-launcher.enable = cfg."anime-game-launcher".enable;
           honkers-railway-launcher.enable = cfg."honkers-railway-launcher".enable;

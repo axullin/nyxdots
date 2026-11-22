@@ -6,9 +6,9 @@
         enable = true;
         theme = "dark";
         package = pkgs.anki;
-        addons = [
-          pkgs.stable.ankiAddons.anki-connect
-          pkgs.stable.ankiAddons.passfail2
+        addons = with pkgs; [
+          ankiAddons.anki-connect
+          ankiAddons.passfail2
         ];
       };
     };

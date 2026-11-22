@@ -3,7 +3,7 @@
     { pkgs, ... }:
     {
       home.packages = with pkgs; [
-        stable.cursor-cli
+        cursor-cli
         arduino-cli
         arduino-ide
         godot

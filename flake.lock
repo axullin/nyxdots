@@ -716,11 +716,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1794488533,
-        "narHash": "sha256-aZHVAF3wr5WHC5c22UOG7xyTUGw/FB4Q1gX/gwW+ZkE=",
+        "lastModified": 1795356969,
+        "narHash": "sha256-w62atkGVPZLm3tnb1dU24moyZAk/rM2wTBTt4aasL7U=",
         "owner": "axullin",
         "repo": "modpacks",
-        "rev": "74456dc4892283c2504f689cd3020e8a0301e2a4",
+        "rev": "a32c77898684149851633ffb47cda396f748c3ab",
         "type": "github"
       },
       "original": {

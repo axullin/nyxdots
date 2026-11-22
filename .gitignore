@@ -1,3 +1,6 @@
 # Nix build outputs
 result
 result-*
+
+# Local-only notes
+notes

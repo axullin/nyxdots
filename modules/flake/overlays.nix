@@ -12,12 +12,6 @@
 
     modifications = _final: prev: {
       hyprland-git = inputs.hyprland.packages.${prev.stdenv.hostPlatform.system};
-
-      vtk = prev.vtk.overrideAttrs (old: {
-        cmakeFlags = old.cmakeFlags ++ [
-          (prev.lib.cmakeBool "VTK_MODULE_USE_EXTERNAL_VTK_vtkpegtl" false)
-        ];
-      });
     };
 
     stable-packages = final: _prev: {
