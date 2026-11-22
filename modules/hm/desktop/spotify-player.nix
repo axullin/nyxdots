@@ -5,14 +5,6 @@
     programs.spotify-player = {
       enable = true;
 
-      package = pkgs.spotify-player.overrideAttrs (old: {
-        postPatch = (old.postPatch or "") + ''
-          substituteInPlace spotify_player/src/auth.rs \
-            --replace-fail 'NCSPOT_REDIRECT_URI: &str = "http://127.0.0.1:8989/login"' \
-                           'NCSPOT_REDIRECT_URI: &str = "http://127.0.0.1:8989/ncspot_login"'
-        '';
-      });
-
       settings = {
         client_id = "eec673bd8161458eb3271107561f7436";
         theme = "monochrome-dark";
